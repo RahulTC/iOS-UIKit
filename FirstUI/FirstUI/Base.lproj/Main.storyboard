@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2eg-1l-YGG">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -11,15 +11,11 @@
         <!--View Controller-->
         <scene sceneID="ug7-YA-EdF">
             <objects>
-                <viewController id="2eg-1l-YGG" customClass="ViewController" customModule="FirstUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2eg-1l-YGG" customClass="ViewController" customModule="FirstUI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vVJ-iJ-k5d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstUIBackground" translatesAutoresizingMaskIntoConstraints="NO" id="2vS-vh-Ggr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QSc-tJ-qPy">
                                 <rect key="frame" x="30" y="348" width="315" height="269"/>
                                 <subviews>
@@ -28,7 +24,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="s2K-7V-oIL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8U-0w-3Hk">
@@ -36,8 +32,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NUA-Na-DVY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-Ed-VPt">
                                         <rect key="frame" x="0.0" y="124" width="315" height="52"/>
@@ -78,12 +74,8 @@
                         <constraints>
                             <constraint firstItem="Uph-1H-Mso" firstAttribute="top" secondItem="5hY-Iv-sNg" secondAttribute="top" constant="50" id="0FA-qo-FZy"/>
                             <constraint firstItem="5hY-Iv-sNg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uph-1H-Mso" secondAttribute="trailing" constant="251.5" id="U9n-hX-B0u"/>
-                            <constraint firstItem="2vS-vh-Ggr" firstAttribute="leading" secondItem="vVJ-iJ-k5d" secondAttribute="leading" id="ZdI-Kk-pNN"/>
                             <constraint firstItem="QSc-tJ-qPy" firstAttribute="leading" secondItem="5hY-Iv-sNg" secondAttribute="leading" constant="30" id="fdY-0e-lDY"/>
-                            <constraint firstAttribute="bottom" secondItem="2vS-vh-Ggr" secondAttribute="bottom" id="hKb-bI-pMU"/>
-                            <constraint firstItem="2vS-vh-Ggr" firstAttribute="top" secondItem="vVJ-iJ-k5d" secondAttribute="top" id="k6H-1A-nJO"/>
                             <constraint firstItem="5hY-Iv-sNg" firstAttribute="bottom" secondItem="QSc-tJ-qPy" secondAttribute="bottom" constant="50" id="qja-1F-zAI"/>
-                            <constraint firstAttribute="trailing" secondItem="2vS-vh-Ggr" secondAttribute="trailing" id="roe-T0-Rc3"/>
                             <constraint firstItem="5hY-Iv-sNg" firstAttribute="trailing" secondItem="QSc-tJ-qPy" secondAttribute="trailing" constant="30" id="sGd-r7-dSi"/>
                             <constraint firstItem="Uph-1H-Mso" firstAttribute="leading" secondItem="5hY-Iv-sNg" secondAttribute="leading" constant="30" id="yoP-Tw-cK1"/>
                         </constraints>
@@ -101,10 +93,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstUIBackground" translatesAutoresizingMaskIntoConstraints="NO" id="B1v-c5-xIR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FV7-ls-AzB">
                                 <rect key="frame" x="30" y="50" width="109.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -119,7 +107,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="YhC-bB-BR3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wej-PE-vZc">
@@ -127,16 +115,16 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="tdf-Da-spC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-jl-ZiH">
                                         <rect key="frame" x="0.0" y="124" width="315" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="urj-e5-ADS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UYb-q5-l7Q">
                                         <rect key="frame" x="0.0" y="186" width="315" height="31"/>
@@ -183,11 +171,7 @@
                         <constraints>
                             <constraint firstItem="lPw-7G-GtD" firstAttribute="bottom" secondItem="CId-3y-Yg4" secondAttribute="bottom" constant="50" id="96D-W1-f4X"/>
                             <constraint firstItem="lPw-7G-GtD" firstAttribute="trailing" secondItem="CId-3y-Yg4" secondAttribute="trailing" constant="30" id="Aij-D6-pih"/>
-                            <constraint firstAttribute="trailing" secondItem="B1v-c5-xIR" secondAttribute="trailing" id="OhZ-5i-Qa2"/>
                             <constraint firstItem="FV7-ls-AzB" firstAttribute="top" secondItem="tck-uF-Xrq" secondAttribute="top" constant="50" id="ZRU-eK-6O9"/>
-                            <constraint firstAttribute="bottom" secondItem="B1v-c5-xIR" secondAttribute="bottom" id="ZsW-6x-XjG"/>
-                            <constraint firstItem="B1v-c5-xIR" firstAttribute="top" secondItem="tck-uF-Xrq" secondAttribute="top" id="f2c-Tg-Vbe"/>
-                            <constraint firstItem="B1v-c5-xIR" firstAttribute="leading" secondItem="tck-uF-Xrq" secondAttribute="leading" id="fdg-er-JlP"/>
                             <constraint firstItem="FV7-ls-AzB" firstAttribute="leading" secondItem="lPw-7G-GtD" secondAttribute="leading" constant="30" id="i0j-BD-lc1"/>
                             <constraint firstItem="CId-3y-Yg4" firstAttribute="leading" secondItem="lPw-7G-GtD" secondAttribute="leading" constant="30" id="lSb-dO-bEY"/>
                             <constraint firstItem="lPw-7G-GtD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FV7-ls-AzB" secondAttribute="trailing" constant="235.5" id="v9I-6Q-EKA"/>
@@ -207,10 +191,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstUIBackground" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-Tg-wsr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaZ-td-tu3">
                                 <rect key="frame" x="30" y="50" width="218.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -225,7 +205,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="sJs-vB-OWW"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="313-f0-LTs">
@@ -250,13 +230,9 @@
                         <constraints>
                             <constraint firstItem="FZi-31-v6q" firstAttribute="trailing" secondItem="5xG-Aj-O8u" secondAttribute="trailing" constant="30" id="9eY-eA-9Dq"/>
                             <constraint firstItem="5xG-Aj-O8u" firstAttribute="centerX" secondItem="E1V-7q-Dzm" secondAttribute="centerX" id="AtH-eN-zRO"/>
-                            <constraint firstItem="NvD-Tg-wsr" firstAttribute="leading" secondItem="E1V-7q-Dzm" secondAttribute="leading" id="IZi-kL-RIS"/>
-                            <constraint firstItem="NvD-Tg-wsr" firstAttribute="top" secondItem="E1V-7q-Dzm" secondAttribute="top" id="IiJ-ND-I9n"/>
                             <constraint firstItem="ZaZ-td-tu3" firstAttribute="leading" secondItem="FZi-31-v6q" secondAttribute="leading" constant="30" id="T8P-Uy-MyY"/>
                             <constraint firstItem="FZi-31-v6q" firstAttribute="bottom" secondItem="5xG-Aj-O8u" secondAttribute="bottom" constant="237" id="XFq-Qz-oxp"/>
-                            <constraint firstAttribute="trailing" secondItem="NvD-Tg-wsr" secondAttribute="trailing" id="XMh-9J-dto"/>
                             <constraint firstItem="5xG-Aj-O8u" firstAttribute="centerY" secondItem="E1V-7q-Dzm" secondAttribute="centerY" id="Y8X-tJ-LO4"/>
-                            <constraint firstAttribute="bottom" secondItem="NvD-Tg-wsr" secondAttribute="bottom" id="eHn-lu-5fk"/>
                             <constraint firstItem="ZaZ-td-tu3" firstAttribute="top" secondItem="E1V-7q-Dzm" secondAttribute="top" constant="50" id="ej5-x6-lTS"/>
                             <constraint firstItem="5xG-Aj-O8u" firstAttribute="leading" secondItem="FZi-31-v6q" secondAttribute="leading" constant="30" id="z1a-di-ksG"/>
                         </constraints>
@@ -269,7 +245,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FirstUIBackground" width="2813" height="5000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
