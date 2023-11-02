@@ -13,6 +13,7 @@ class PokemonDetailViewController: UIViewController {
     @IBOutlet weak var pokemonDetailVCNameLabel: UILabel!
     
     var pokemonName:String?
+    var pokemonDetailImage: UIImage?
     
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class PokemonDetailViewController: UIViewController {
     
     func setLabelValue(){
         pokemonDetailVCNameLabel.text = pokemonName ?? "None"
+        pokemonDetailVCPokemonImage.image = pokemonDetailImage
     }
 
 }
