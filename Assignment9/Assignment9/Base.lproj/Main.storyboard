@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,15 +35,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="79K-Aa-gBl">
-                                <rect key="frame" x="37.666666666666657" y="324.66666666666669" width="300" height="162.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="79K-Aa-gBl">
+                                <rect key="frame" x="37.666666666666657" y="243.66666666666666" width="300" height="324.66666666666674"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-T9-atc">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="58.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
                                             <backgroundConfiguration key="background">
-                                                <color key="strokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </backgroundConfiguration>
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Trainer Details">
@@ -59,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6t5-40-BHF">
-                                        <rect key="frame" x="0.0" y="104.00000000000001" width="300" height="58.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="88.666666666666657" width="300" height="58.666666666666657"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
@@ -74,12 +75,63 @@
                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                     </attributes>
                                                 </fragment>
+                                                <fragment content=" List View">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="pokedexButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8WY-IP-FiM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8a-v9-REg">
+                                        <rect key="frame" x="0.0" y="177.33333333333334" width="300" height="58.666666666666657"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background" strokeWidth="1">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Pokedex Grid View">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="16" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pokedexGridViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEJ-ns-lnN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVS-3s-ln6">
+                                        <rect key="frame" x="0.0" y="266" width="300" height="58.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Pokedex Web View">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="1" green="0.4048372543" blue="0.29112473490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pokedexWebViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpM-nG-dCr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -89,7 +141,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="79K-Aa-gBl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AKf-US-uym"/>
-                            <constraint firstItem="79K-Aa-gBl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="BDD-m6-4bJ"/>
+                            <constraint firstItem="79K-Aa-gBl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="BDD-m6-4bJ"/>
                             <constraint firstItem="79K-Aa-gBl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tut-P6-vG8"/>
                             <constraint firstItem="79K-Aa-gBl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="zMW-Ds-e8N"/>
                         </constraints>
@@ -146,22 +198,49 @@
         <!--Pokedex List View Controller-->
         <scene sceneID="YQ3-Gg-Ltk">
             <objects>
-                <viewController storyboardIdentifier="pokedexListViewController" id="mls-2Q-P8b" customClass="PokedexListViewController" customModule="Assignment9" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PokemonListViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mls-2Q-P8b" customClass="PokedexListViewController" customModule="Assignment9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIO-eb-5ah">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-ql-Khb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="1" sectionFooterHeight="18" estimatedSectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-ql-Khb">
                                 <rect key="frame" x="0.0" y="50" width="375" height="728"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokedexCellID" id="Src-ha-IV2">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PokedexListViewCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokedexCellID" id="Src-ha-IV2" userLabel="PokedexListViewCell" customClass="PokedexListViewCell" customModule="Assignment9" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Src-ha-IV2" id="0wp-UD-U0Z">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charizardDetailImages" translatesAutoresizingMaskIntoConstraints="NO" id="AQM-w8-iBk">
+                                                    <rect key="frame" x="15" y="4" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="iAE-AZ-MNN"/>
+                                                        <constraint firstAttribute="height" constant="35" id="yAy-rA-lTd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc4-39-qCg">
+                                                    <rect key="frame" x="70" y="11.000000000000002" width="265" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Vc4-39-qCg" secondAttribute="bottom" id="BHv-rt-Agw"/>
+                                                <constraint firstItem="AQM-w8-iBk" firstAttribute="top" secondItem="0wp-UD-U0Z" secondAttribute="top" constant="4" id="PsF-Jr-7uh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vc4-39-qCg" secondAttribute="trailing" constant="20" id="Vv3-GJ-kH0"/>
+                                                <constraint firstItem="Vc4-39-qCg" firstAttribute="leading" secondItem="AQM-w8-iBk" secondAttribute="trailing" constant="20" id="oen-mc-BJp"/>
+                                                <constraint firstItem="AQM-w8-iBk" firstAttribute="leading" secondItem="0wp-UD-U0Z" secondAttribute="leading" constant="15" id="rmc-N4-Who"/>
+                                                <constraint firstItem="Vc4-39-qCg" firstAttribute="top" secondItem="0wp-UD-U0Z" secondAttribute="topMargin" id="zYg-v8-Ewf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pokemonListImageView" destination="AQM-w8-iBk" id="yY3-gG-5tj"/>
+                                            <outlet property="pokemonListNameLabel" destination="Vc4-39-qCg" id="I3B-hX-PZu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -225,10 +304,140 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvg-zZ-yig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228" y="530"/>
+            <point key="canvasLocation" x="2913" y="530"/>
+        </scene>
+        <!--Pokemon Grid View Controller-->
+        <scene sceneID="98L-PJ-mSJ">
+            <objects>
+                <viewController storyboardIdentifier="PokemonGridViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IQW-4s-h4u" customClass="PokemonGridViewController" customModule="Assignment9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jaT-2N-eoi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MSD-FJ-gKT">
+                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="nG2-ct-wo0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="39" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="GridViewCellID" reuseIdentifier="PokemonGridViewID" id="MQd-xp-q0d" customClass="GridViewCell" customModule="Assignment9" customModuleProvider="target">
+                                        <rect key="frame" x="39" y="50" width="128" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LpH-hW-q8v">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Qq-3v-S8i">
+                                                    <rect key="frame" x="24" y="10" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="6Wl-j5-Bzg"/>
+                                                        <constraint firstAttribute="width" constant="80" id="axK-js-faf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-sG-OSX">
+                                                    <rect key="frame" x="4" y="98" width="120" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4Qq-3v-S8i" secondAttribute="trailing" constant="24" id="2em-qK-CUj"/>
+                                                <constraint firstAttribute="bottom" secondItem="tUf-sG-OSX" secondAttribute="bottom" constant="10" id="628-Rf-gY8"/>
+                                                <constraint firstItem="tUf-sG-OSX" firstAttribute="top" secondItem="4Qq-3v-S8i" secondAttribute="bottom" constant="8" id="HjD-eb-hhz"/>
+                                                <constraint firstAttribute="trailing" secondItem="tUf-sG-OSX" secondAttribute="trailing" constant="4" id="djk-bG-afd"/>
+                                                <constraint firstItem="4Qq-3v-S8i" firstAttribute="top" secondItem="LpH-hW-q8v" secondAttribute="top" constant="10" id="fDu-9t-jcT"/>
+                                                <constraint firstItem="tUf-sG-OSX" firstAttribute="leading" secondItem="LpH-hW-q8v" secondAttribute="leading" constant="4" id="j65-uP-Kk4"/>
+                                                <constraint firstItem="4Qq-3v-S8i" firstAttribute="leading" secondItem="LpH-hW-q8v" secondAttribute="leading" constant="24" id="kxD-8U-xTG"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="pokemonGridImageView" destination="4Qq-3v-S8i" id="ReG-3z-Pzw"/>
+                                            <outlet property="pokemonGridNameLabel" destination="tUf-sG-OSX" id="YsI-G9-RET"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="GridSectionID" id="q3g-wI-g6N" customClass="SectionHeaderCollectionReusableView" customModule="Assignment9" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-z4-eqc">
+                                            <rect key="frame" x="18" y="10" width="339" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="M6Z-z4-eqc" firstAttribute="leading" secondItem="q3g-wI-g6N" secondAttribute="leadingMargin" constant="10" id="86E-7G-VLR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="M6Z-z4-eqc" secondAttribute="bottom" constant="2" id="AuF-b7-9Rb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="M6Z-z4-eqc" secondAttribute="trailing" constant="10" id="N6M-KW-o8m"/>
+                                        <constraint firstItem="M6Z-z4-eqc" firstAttribute="top" secondItem="q3g-wI-g6N" secondAttribute="topMargin" constant="2" id="wBc-qM-tiz"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionHeaderlabel" destination="M6Z-z4-eqc" id="kZS-f7-8HV"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jrY-ul-lQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jrY-ul-lQc" firstAttribute="bottom" secondItem="MSD-FJ-gKT" secondAttribute="bottom" id="15V-xg-HQ0"/>
+                            <constraint firstItem="MSD-FJ-gKT" firstAttribute="leading" secondItem="jrY-ul-lQc" secondAttribute="leading" id="3n8-Bb-v7E"/>
+                            <constraint firstItem="MSD-FJ-gKT" firstAttribute="top" secondItem="jrY-ul-lQc" secondAttribute="top" id="9bR-Yu-2Ux"/>
+                            <constraint firstItem="jrY-ul-lQc" firstAttribute="trailing" secondItem="MSD-FJ-gKT" secondAttribute="trailing" id="FYh-XE-mDh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokedexGridView" destination="MSD-FJ-gKT" id="SAp-wc-Zva"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VMV-Dx-KIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3724" y="530"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="3QV-nU-WEs">
+            <objects>
+                <viewController storyboardIdentifier="WebViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V4B-JB-Rfe" customClass="WebViewController" customModule="Assignment9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ea5-WM-05e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFz-3k-4EQ">
+                                <rect key="frame" x="0.0" y="50" width="375" height="728"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dRw-SB-qwE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aFz-3k-4EQ" firstAttribute="leading" secondItem="dRw-SB-qwE" secondAttribute="leading" id="Meh-OB-I7M"/>
+                            <constraint firstItem="aFz-3k-4EQ" firstAttribute="bottom" secondItem="dRw-SB-qwE" secondAttribute="bottom" id="atR-hc-GX5"/>
+                            <constraint firstItem="aFz-3k-4EQ" firstAttribute="top" secondItem="dRw-SB-qwE" secondAttribute="top" id="iPe-vH-VNN"/>
+                            <constraint firstItem="aFz-3k-4EQ" firstAttribute="trailing" secondItem="dRw-SB-qwE" secondAttribute="trailing" id="sGy-gv-zUN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonDataWebView" destination="aFz-3k-4EQ" id="nl6-oB-lfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OG3-0t-Anw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4520.8000000000002" y="529.80295566502468"/>
         </scene>
     </scenes>
     <resources>
+        <image name="charizardDetailImages" width="475" height="475"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
