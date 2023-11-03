@@ -18,11 +18,20 @@ class DigimonTableViewController: UITableViewController {
         digimonTableView.dataSource = self
         digimonTableView.delegate  = self
         
+        digimonTableView.estimatedRowHeight = 45
+        
         // Calling function of network manager
-        callAPIFromNetworkManager()
+//        callAPIFromNetworkManager()
+        getDataFromNetworkManagerUsingProtocolDelegate()
     }
     
     // MARK: - Network Manager
+    func getDataFromNetworkManagerUsingProtocolDelegate(){
+        let networkManager = NetworkManager()
+        guard let url = URL(string: "https://digimon-api.vercel.app/api/digimon") else {return}
+        networkManager.networkDelegate = self
+        networkManager.getDataFromAPIusingNetworkProtocol(url: url)
+    }
     
     func callAPIFromNetworkManager(){
         let networkManager = NetworkManager()
@@ -31,11 +40,7 @@ class DigimonTableViewController: UITableViewController {
         networkManager.getDataFromAPI(url: url, modelType: [DigimonModel].self) { result in
             switch result {
             case .success(let digimonListData):
-                self.digimonList.append(contentsOf: digimonListData)
-                DispatchQueue.main.async {
-                    self.digimonTableView.reloadData()
-                }
-//                print(result)
+                print(digimonListData)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -73,4 +78,21 @@ class DigimonTableViewController: UITableViewController {
         
         self.navigationController?.pushViewController(digimonDetailVC, animated: true)
     }
+}
+
+
+extension DigimonTableViewController: NetworkResponseProtocol{
+    func didFinishWithResoinse(digimonListData: [DigimonModel]) {
+        DispatchQueue.main.async {
+            self.digimonList.append(contentsOf: digimonListData)
+            self.digimonTableView.reloadData()
+        }
+//                print(result)
+    }
+    
+    func didFinishWithError(error: Error) {
+        
+    }
+    
+    
 }

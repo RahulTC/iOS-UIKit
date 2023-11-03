@@ -28,7 +28,7 @@ class DigimonDetailViewController: UIViewController {
             digimonDetailVCImage.load(url: url)
         }
         digimonDetailVCNameLabel.text = digimonName ?? "None"
-        digimonDetailVCNameLabel.text = digimonLevel ?? "None"
+        digimonDetailVCLevelLabel.text = digimonLevel ?? "None"
         
     }
 

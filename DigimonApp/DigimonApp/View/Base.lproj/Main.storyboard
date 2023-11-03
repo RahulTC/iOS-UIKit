@@ -113,6 +113,7 @@
                                             <rect key="frame" x="20" y="5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="6Qr-MS-BkG"/>
+                                                <constraint firstAttribute="height" constant="35" id="M0e-4F-Abx"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhm-dp-406">
@@ -123,7 +124,6 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="JBw-hS-khX" secondAttribute="bottom" constant="5" id="3MM-X4-mLs"/>
                                         <constraint firstItem="Yhm-dp-406" firstAttribute="leading" secondItem="JBw-hS-khX" secondAttribute="trailing" constant="20" id="4Cu-wK-mBm"/>
                                         <constraint firstItem="JBw-hS-khX" firstAttribute="leading" secondItem="sVc-ux-thu" secondAttribute="leading" constant="20" symbolic="YES" id="AaU-oS-CL0"/>
                                         <constraint firstAttribute="bottom" secondItem="Yhm-dp-406" secondAttribute="bottom" constant="5" id="JpG-ul-N2k"/>
