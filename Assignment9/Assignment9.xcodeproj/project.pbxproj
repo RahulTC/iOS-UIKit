@@ -26,6 +26,7 @@
 		DADE71C52AF2E1DF006169F1 /* UserList.json in Resources */ = {isa = PBXBuildFile; fileRef = DADE71C42AF2E1DF006169F1 /* UserList.json */; };
 		DADE71CB2AF2E360006169F1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE71CA2AF2E360006169F1 /* UserModel.swift */; };
 		DADE71CD2AF2F33C006169F1 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE71CC2AF2F33C006169F1 /* SectionHeaderCollectionReusableView.swift */; };
+		DADE71D42AF3CB7B006169F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE71D32AF3CB7B006169F1 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DADE71C42AF2E1DF006169F1 /* UserList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserList.json; sourceTree = "<group>"; };
 		DADE71CA2AF2E360006169F1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DADE71CC2AF2F33C006169F1 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		DADE71D32AF3CB7B006169F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		DA69FCDB2AF1AAE900220E25 /* Assignment9 */ = {
 			isa = PBXGroup;
 			children = (
+				DADE71CE2AF3C92A006169F1 /* MVC */,
 				DA69FCDC2AF1AAE900220E25 /* AppDelegate.swift */,
 				DA69FCDE2AF1AAE900220E25 /* SceneDelegate.swift */,
 				DA69FCE02AF1AAE900220E25 /* ViewController.swift */,
@@ -94,8 +97,8 @@
 				DADE71C62AF2E225006169F1 /* ListView */,
 				DADE71C72AF2E233006169F1 /* GridView */,
 				DADE71C82AF2E247006169F1 /* CustomTableCell */,
-				DA69FCF42AF20BAD00220E25 /* PokemonDetailViewController.swift */,
 				DADE71BE2AF2A895006169F1 /* WebViewController.swift */,
+				DA69FCF42AF20BAD00220E25 /* PokemonDetailViewController.swift */,
 				DADE71C42AF2E1DF006169F1 /* UserList.json */,
 			);
 			path = Assignment9;
@@ -136,6 +139,46 @@
 				DADE71CA2AF2E360006169F1 /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DADE71CE2AF3C92A006169F1 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				DADE71D22AF3CB5B006169F1 /* Networking */,
+				DADE71CF2AF3C936006169F1 /* Model */,
+				DADE71D02AF3C93C006169F1 /* View */,
+				DADE71D12AF3C951006169F1 /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		DADE71CF2AF3C936006169F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DADE71D02AF3C93C006169F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DADE71D12AF3C951006169F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DADE71D22AF3CB5B006169F1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DADE71D32AF3CB7B006169F1 /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +266,7 @@
 				DA69FCDF2AF1AAE900220E25 /* SceneDelegate.swift in Sources */,
 				DA69FCF52AF20BAD00220E25 /* PokemonDetailViewController.swift in Sources */,
 				DADE71C22AF2C9AB006169F1 /* TableViewCell.swift in Sources */,
+				DADE71D42AF3CB7B006169F1 /* NetworkManager.swift in Sources */,
 				DADE71BB2AF28AA4006169F1 /* GridViewCell.swift in Sources */,
 				DADE71BD2AF28AE2006169F1 /* PokedexListViewCell.swift in Sources */,
 			);

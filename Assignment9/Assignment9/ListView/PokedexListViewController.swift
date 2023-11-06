@@ -22,30 +22,49 @@ class PokedexListViewController: UIViewController {
         let xib = UINib(nibName: "TableViewCell", bundle: nil)
         pokedexTableView.register(xib, forCellReuseIdentifier: "TableViewCellID")
         
-        readDataFromJSONFile()
+//        readDataFromJSONFile()
+        callAPIFromNetworkManager()
     }
     
-    func readDataFromJSONFile(){
-        let bundle = Bundle(for: PokedexListViewController.self)
+    func callAPIFromNetworkManager(){
+        let networkManager = NetworkManager()
+        guard let url = URL(string: "https://reqres.in/api/users/") else {return}
         
-        //get the path of the file which has the json data
-        let url = bundle.url(forResource: "UserList", withExtension: "json")
-        
-        // unwrap the url since it is optional and can return nil value
-        guard let url = url else { return }
-        
-        do{
-            let jsonData = try Data(contentsOf: url)
-            let finalOutput = try JSONDecoder().decode(UserModel.self, from: jsonData)
-            userDataList = finalOutput.data
-            DispatchQueue.main.async {
-                self.pokedexTableView.reloadData()
+        networkManager.getDataFromAPI(url: url, modelType: UserModel.self) { result in    
+            switch result {
+            case .success(let userData):
+                self.userDataList = userData.data
+                DispatchQueue.main.async {
+                    self.pokedexTableView.reloadData()
+                }
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
             }
-//            print(finalOutput)
-        }catch{
-            print(error.localizedDescription)
         }
     }
+    
+//    func readDataFromJSONFile(){
+//        let bundle = Bundle(for: PokedexListViewController.self)
+//        
+//        //get the path of the file which has the json data
+//        let url = bundle.url(forResource: "UserList", withExtension: "json")
+//        
+//        // unwrap the url since it is optional and can return nil value
+//        guard let url = url else { return }
+//        
+//        do{
+//            let jsonData = try Data(contentsOf: url)
+//            let finalOutput = try JSONDecoder().decode(UserModel.self, from: jsonData)
+//            userDataList = finalOutput.data
+//            DispatchQueue.main.async {
+//                self.pokedexTableView.reloadData()
+//            }
+////            print(finalOutput)
+//        }catch{
+//            print(error.localizedDescription)
+//        }
+//    }
     
     
 }
