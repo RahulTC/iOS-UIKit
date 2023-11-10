@@ -16,6 +16,7 @@
 		DA69FCF12AF1FC4B00220E25 /* TrainerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69FCF02AF1FC4B00220E25 /* TrainerDetailViewController.swift */; };
 		DA69FCF32AF1FC8100220E25 /* PokedexListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69FCF22AF1FC8100220E25 /* PokedexListViewController.swift */; };
 		DA69FCF52AF20BAD00220E25 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69FCF42AF20BAD00220E25 /* PokemonDetailViewController.swift */; };
+		DA7209992AFD77F600BCE5C0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7209982AFD77F600BCE5C0 /* LoginViewModel.swift */; };
 		DADE71B32AF27C19006169F1 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE71B22AF27C19006169F1 /* PokemonModel.swift */; };
 		DADE71B52AF2895D006169F1 /* PokemonGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE71B42AF2895C006169F1 /* PokemonGridViewController.swift */; };
 		DADE71BB2AF28AA4006169F1 /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE71BA2AF28AA4006169F1 /* GridViewCell.swift */; };
@@ -41,6 +42,7 @@
 		DA69FCF02AF1FC4B00220E25 /* TrainerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailViewController.swift; sourceTree = "<group>"; };
 		DA69FCF22AF1FC8100220E25 /* PokedexListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexListViewController.swift; sourceTree = "<group>"; };
 		DA69FCF42AF20BAD00220E25 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		DA7209982AFD77F600BCE5C0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DADE71B22AF27C19006169F1 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		DADE71B42AF2895C006169F1 /* PokemonGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGridViewController.swift; sourceTree = "<group>"; };
 		DADE71BA2AF28AA4006169F1 /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		DA69FCDB2AF1AAE900220E25 /* Assignment9 */ = {
 			isa = PBXGroup;
 			children = (
-				DADE71CE2AF3C92A006169F1 /* MVC */,
+				DADE71CE2AF3C92A006169F1 /* MVVM */,
 				DA69FCDC2AF1AAE900220E25 /* AppDelegate.swift */,
 				DA69FCDE2AF1AAE900220E25 /* SceneDelegate.swift */,
 				DA69FCE02AF1AAE900220E25 /* ViewController.swift */,
@@ -102,6 +104,14 @@
 				DADE71C42AF2E1DF006169F1 /* UserList.json */,
 			);
 			path = Assignment9;
+			sourceTree = "<group>";
+		};
+		DA7209972AFD761E00BCE5C0 /* View-Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA7209982AFD77F600BCE5C0 /* LoginViewModel.swift */,
+			);
+			path = "View-Model";
 			sourceTree = "<group>";
 		};
 		DADE71C62AF2E225006169F1 /* ListView */ = {
@@ -141,15 +151,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		DADE71CE2AF3C92A006169F1 /* MVC */ = {
+		DADE71CE2AF3C92A006169F1 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				DA7209972AFD761E00BCE5C0 /* View-Model */,
 				DADE71D22AF3CB5B006169F1 /* Networking */,
 				DADE71CF2AF3C936006169F1 /* Model */,
 				DADE71D02AF3C93C006169F1 /* View */,
 				DADE71D12AF3C951006169F1 /* Controller */,
 			);
-			path = MVC;
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		DADE71CF2AF3C936006169F1 /* Model */ = {
@@ -258,6 +269,7 @@
 				DADE71B52AF2895D006169F1 /* PokemonGridViewController.swift in Sources */,
 				DADE71BF2AF2A895006169F1 /* WebViewController.swift in Sources */,
 				DA69FCE12AF1AAE900220E25 /* ViewController.swift in Sources */,
+				DA7209992AFD77F600BCE5C0 /* LoginViewModel.swift in Sources */,
 				DADE71B32AF27C19006169F1 /* PokemonModel.swift in Sources */,
 				DA69FCF12AF1FC4B00220E25 /* TrainerDetailViewController.swift in Sources */,
 				DADE71CB2AF2E360006169F1 /* UserModel.swift in Sources */,

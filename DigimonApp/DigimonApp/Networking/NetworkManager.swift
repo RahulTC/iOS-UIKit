@@ -62,7 +62,7 @@ class NetworkManager: NetworkableProtocol {
             
             do{
                 let result = try JSONDecoder().decode([DigimonModel].self, from: rawData)
-                self.networkDelegate?.didFinishWithResoinse(digimonListData: result)
+                self.networkDelegate?.didFinishWithResponse(digimonListData: result)
             }catch{
                 self.networkDelegate?.didFinishWithError(error: error)
                 print(error.localizedDescription)
@@ -73,6 +73,6 @@ class NetworkManager: NetworkableProtocol {
 }
 
 protocol NetworkResponseProtocol{
-    func didFinishWithResoinse(digimonListData:[DigimonModel])
+    func didFinishWithResponse(digimonListData:[DigimonModel])
     func didFinishWithError(error: Error)
 }
