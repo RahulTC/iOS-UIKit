@@ -34,7 +34,7 @@ class LoginViewModel {
         
         isValid = isEmailValid && isValidPassword && isUserValid
         
-        return isValid
-//        return true
+//        return isValid
+        return true
     }
 }
